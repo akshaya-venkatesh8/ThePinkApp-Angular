@@ -5,7 +5,16 @@
 </div>
 
 <div class="play-container">    
-    <input type="text" [(ngModel)]="name" />
+    <input type="text" [(ngModel)]="name" placeholder="Say something..." />
     <br>
     <strong>You said </strong> {{ name }}
+</div>
+
+<div class="play-container" [style.background-color]="clickCounter > 4 ? 'purple' : 'hotpink'">    
+   <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+       <p>Try something else! Clicking will always increase counter.</p>
+   </ng-template>
+   <ng-template #none>
+       <p>Pink is a fun color</p>
+   </ng-template>
 </div>
