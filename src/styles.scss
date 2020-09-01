@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+$theme-font: 'Merriweather', serif;
+$primary:hotpink;
+$secondary: paleturquoise;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $theme-font;
+    font-size: 18px;
+background-color: $primary;
+    header{
+        background-color: $secondary;
+        color: hotpink;
+         padding: 1em 1em;
+    
+    }
+    .container{
+
+      nav{
+          float: right;
+          ul{
+              list-style-type: none;
+              margin: 0;
+              display: flex;
+              li a{ 
+                  padding: 1em;
+                  color: $primary;
+                  &:hover{
+                     
+                      background: darken($secondary, 10%);
+                  }
+              }
+          }
+      }
+    }
+}
+
+a{
+    text-decoration: none;
+    &.logo{
+        font-weight: bold;
+        color: $primary;
+    }
+}
+
+h1{
+    margin: 10px;
+}
