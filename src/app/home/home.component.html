@@ -10,9 +10,32 @@
     <strong>You said </strong> {{ name }}
 </div>
 
-<div class="play-container" [style.background-color]="clickCounter > 4 ? 'purple' : 'hotpink'">    
+<div class="play-container" [ngStyle]="{
+    'background-color': clickCounter > 4 ? 'MediumVioletRed' : 'HotPink',
+    'color': clickCounter > 4 ? 'MistyRose' : 'PaleTurquoise'
+}">    
+    This div uses ngStyle - ngStyle takes object with css-props as keys and conditional exps as values.
    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
        <p>Try something else! Clicking will always increase counter.</p>
+   </ng-template>
+   <ng-template #none>
+       <p>Pink is a fun color</p>
+   </ng-template>
+</div>
+
+<div class="play-container" [class.count]="clickCounter > 7">  
+    This div uses Class binding [class.className]="~condition~" 
+   <ng-template [ngIf]="clickCounter > 6" [ngIfElse]="none">
+       <p>Pfft! You are still hitting the counter.</p>
+   </ng-template>
+   <ng-template #none>
+       <p>Pink is a fun color</p>
+   </ng-template>
+</div>
+<div class="play-container" [ngClass]="setClasses()">  
+    This div uses ngClass directive. 
+   <ng-template [ngIf]="clickCounter > 8" [ngIfElse]="none">
+       <p>Seriously?! Are you that bored?!.</p>
    </ng-template>
    <ng-template #none>
        <p>Pink is a fun color</p>

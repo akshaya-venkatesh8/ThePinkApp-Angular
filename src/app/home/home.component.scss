@@ -19,4 +19,17 @@
             padding: 1em;
             margin-bottom: 2em;
     }
+    &.count{
+        background-color: slateblue;
+        color: whitesmoke;
+        border-color: whitesmoke;
+    }
+    &.highCount{
+        background-color: rebeccapurple;
+        color: whitesmoke;
+        border-color: whitesmoke;
+    }
+    &.lowCount{
+        color: purple;
+    }
 }
