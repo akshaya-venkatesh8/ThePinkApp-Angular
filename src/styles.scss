@@ -10,10 +10,14 @@ body{
     font-family: $theme-font;
     font-size: 18px;
 background-color: $primary;
+h1{
+    margin: 1em;
+    color: $secondary;
+}
     header{
         background-color: $secondary;
         color: hotpink;
-         padding: 1em 1em;
+        padding: 1em 1em;
     
     }
     .container{

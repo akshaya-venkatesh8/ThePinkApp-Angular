@@ -6,9 +6,9 @@ import {HttpClient} from '@angular/common/http'
 })
 export class HttpService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getPinkNodes(){
-    
+    return this.http.get("https://my-json-server.typicode.com/akshaya-venkatesh8/ThePinkApp-Angular/db");
   }
 }
